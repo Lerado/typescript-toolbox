@@ -5,9 +5,14 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/YOUR_GITHUB_USER_NAME/@lerado/typescript-toolbox",
+  "repository": "https://github.com/Lerado/typescript-toolbox",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "toolbox",
+    "lerado",
+    "utils"
+  ],
   "scripts": {
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.json",
