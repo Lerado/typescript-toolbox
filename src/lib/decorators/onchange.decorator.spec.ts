@@ -14,14 +14,26 @@ class TestClass {
 }
 
 /**
+ * Checks if OnChange decorator throws an error
+ * when callback function can not be found using its name
+ */
+test('OnChange with function name should fail if function not found', (t) => {
+  class TestClassChild extends TestClass {
+    @OnChange('functionNotFound') property = 0;
+  }
+
+  t.throws(() => new TestClassChild());
+});
+
+/**
  * Checks if OnChange decorator works as expected with a callback function name
  */
 test('OnChange with function name', (t) => {
-  class TestClass1 extends TestClass {
+  class TestClassChild extends TestClass {
     @OnChange('_callback') property = 0;
   }
 
-  const instance = new TestClass1();
+  const instance = new TestClassChild();
 
   // Check initial values
   t.is(instance.property, 0);
@@ -49,14 +61,14 @@ test('OnChange with function name', (t) => {
  * Checks if OnChange decorator works as expected with a callback function
  */
 test('OnChange with function', (t) => {
-  class TestClass2 extends TestClass {
-    @OnChange<number>(function (this: TestClass2, newValue, changes) {
+  class TestClassChild extends TestClass {
+    @OnChange<number>(function (this: TestClassChild, newValue, changes) {
       this._callback(newValue, changes);
     })
     property = 0;
   }
 
-  const instance = new TestClass2();
+  const instance = new TestClassChild();
 
   // Check initial values
   t.is(instance.property, 0);
@@ -78,4 +90,27 @@ test('OnChange with function', (t) => {
   t.false(instance.latestChange?.firstChange);
   t.is(instance.latestChange?.previousValue, 0);
   t.is(instance.latestChange?.currentValue, 1);
+});
+
+/**
+ * Checks if OnChange decorator only reacts to value changes
+ */
+test('OnChange should only react to changes', (t) => {
+  class TestClassChild extends TestClass {
+    @OnChange<number>(function (this: TestClassChild, newValue, changes) {
+      this._callback(newValue, changes);
+    })
+    property = 0;
+  }
+
+  const instance = new TestClassChild();
+
+  // Callback should have executed once at this point (initialization)
+  t.is(instance.callbackExecution, 1);
+
+  // Set same value to property
+  instance.property = 0;
+
+  // Callback execution counter should be the same
+  t.is(instance.callbackExecution, 1);
 });
