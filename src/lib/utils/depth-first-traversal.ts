@@ -38,9 +38,10 @@ const depthFirstTraversal = <T extends Record<string, unknown>>(
       callable(visitedElement);
     }
     result.push(visitedElement);
-    // Stack bloc children from right to left to preserve order
+    // Stack children in the reverse order to preserve original order
     const children: T[] = (visitedElement[childrenKey] as T[]) ?? [];
-    stack.push(...children.reverse());
+    for (let childIndex = children.length - 1; childIndex >= 0; childIndex--) {
+      stack.push(children[childIndex]);
   }
 
   return result;
