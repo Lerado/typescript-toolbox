@@ -152,7 +152,8 @@ _Please refer to the [documentation](https://lerado.github.io/typescript-toolbox
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Release v1.0.0 on npm
+- [x] Release v1.0.0 on npm
+- [ ] Configure Github actions for CI/CD
 <!-- - [ ] Feature 2
 - [ ] Feature 3
     - [ ] Nested Feature -->
