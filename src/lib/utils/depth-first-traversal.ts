@@ -9,14 +9,14 @@
  * const tree = {
  *  id: 1,
  *  children: [
- *    { id: 2 },
- *    { id: 3 }
+ *    { id: 2, children: [ { id: 4 } ] },
+ *    { id: 3, children: [ { id: 5 } ] }
  *  ]
  * };
  *
  * depthFirstTraversal(tree, 'children', console.log);
- * // => console: 1, 2, 3
- * // => [{ id: 1 }, { id: 2 }, { id: 3 }]
+ * // => console: 1, 2, 4, 3, 5
+ * // => [{ id: 1 }, { id: 2 }, { id: 4 },  { id: 3 },  { id: 5 }]
  * ```
  * @param root - the tree's root object
  * @param childrenKey - accessor name for child elements
@@ -42,6 +42,7 @@ const depthFirstTraversal = <T extends Record<string, unknown>>(
     const children: T[] = (visitedElement[childrenKey] as T[]) ?? [];
     for (let childIndex = children.length - 1; childIndex >= 0; childIndex--) {
       stack.push(children[childIndex]);
+    }
   }
 
   return result;
