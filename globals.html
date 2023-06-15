@@ -84,6 +84,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#onchange" class="tsd-kind-icon">On<wbr>Change</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#breadthfirsttraversal" class="tsd-kind-icon">breadth<wbr>First<wbr>Traversal</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#depthfirsttraversal" class="tsd-kind-icon">depth<wbr>First<wbr>Traversal</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#isstrongpassword" class="tsd-kind-icon">is<wbr>Strong<wbr>Password</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#objecttoflatstring" class="tsd-kind-icon">object<wbr>ToFlat<wbr>String</a></li>
@@ -100,7 +101,7 @@
 					<div class="tsd-signature tsd-kind-icon">Callback<wbr>Function&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, change<span class="tsd-signature-symbol">: </span><a href="globals.html#simplechange" class="tsd-signature-type">SimpleChange</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/decorators/onchange.decorator.ts#L7">lib/decorators/onchange.decorator.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/decorators/onchange.decorator.ts#L7">lib/decorators/onchange.decorator.ts:7</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -140,7 +141,7 @@
 					<div class="tsd-signature tsd-kind-icon">Simple<wbr>Change&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>currentValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">; </span>firstChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>previousValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>isFirstChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/decorators/onchange.decorator.ts#L1">lib/decorators/onchange.decorator.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/decorators/onchange.decorator.ts#L1">lib/decorators/onchange.decorator.ts:1</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -159,7 +160,7 @@
 					<div class="tsd-signature tsd-kind-icon">STRONG_<wbr>PASSWORD_<wbr>REGEXP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /(?&#x3D;.*[a-z])(?&#x3D;.*[A-Z])(?&#x3D;.*[0-9])(?&#x3D;.*[^A-Za-z0-9])(?&#x3D;.{8,})/</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/utils/strong-password.ts#L16">lib/utils/strong-password.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/utils/strong-password.ts#L16">lib/utils/strong-password.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -187,7 +188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/decorators/onchange.decorator.ts#L30">lib/decorators/onchange.decorator.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/decorators/onchange.decorator.ts#L30">lib/decorators/onchange.decorator.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,6 +235,74 @@ class MyClass {
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="breadthfirsttraversal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> breadth<wbr>First<wbr>Traversal</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">breadth<wbr>First<wbr>Traversal&lt;T&gt;<span class="tsd-signature-symbol">(</span>root<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, childrenKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callable<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>visitedElement<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/utils/breadth-first-traversal.ts#L25">lib/utils/breadth-first-traversal.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Performs a breadth-first traversal of a tree-like structure
+									and returns the march of the traversal</p>
+								</div>
+								<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+									<h3>Usage</h3>
+								</a>
+								<pre><code class="language-ts"><span class="hljs-keyword">import</span> { breadthFirstTraversal } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@lerado/typescript-toolbox&#x27;</span>;
+
+<span class="hljs-keyword">const</span> tree = {
+ <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+ <span class="hljs-attr">children</span>: [
+   { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">children</span>: [ { <span class="hljs-attr">id</span>: <span class="hljs-number">4</span> } ] },
+   { <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">children</span>: [ { <span class="hljs-attr">id</span>: <span class="hljs-number">5</span> } ] }
+ ]
+};
+
+breadthFirstTraversal(tree, <span class="hljs-string">&#x27;children&#x27;</span>, <span class="hljs-built_in">console</span>.log);
+<span class="hljs-comment">// =&gt; console: 1, 2, 3, 4, 5</span>
+<span class="hljs-comment">// =&gt; [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>root: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>the tree&#39;s root object</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>childrenKey: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>accessor name for child elements</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> callable: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>visitedElement<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
 					<a name="depthfirsttraversal" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> depth<wbr>First<wbr>Traversal</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
@@ -243,7 +312,7 @@ class MyClass {
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/utils/depth-first-traversal.ts#L25">lib/utils/depth-first-traversal.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/utils/depth-first-traversal.ts#L25">lib/utils/depth-first-traversal.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -311,7 +380,7 @@ depthFirstTraversal(tree, <span class="hljs-string">&#x27;children&#x27;</span>,
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/utils/strong-password.ts#L38">lib/utils/strong-password.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/utils/strong-password.ts#L38">lib/utils/strong-password.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -361,7 +430,7 @@ isStrongPassword(<span class="hljs-string">&#x27;Password!123&#x27;</span>);
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/7905d81/src/lib/utils/object-to-flat-string.ts#L15">lib/utils/object-to-flat-string.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/Lerado/typescript-toolbox/blob/184a2b4/src/lib/utils/object-to-flat-string.ts#L15">lib/utils/object-to-flat-string.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -416,6 +485,9 @@ objectToFlatString({ <span class="hljs-attr">id</span>: <span class="hljs-number
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#onchange" class="tsd-kind-icon">On<wbr>Change</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#breadthfirsttraversal" class="tsd-kind-icon">breadth<wbr>First<wbr>Traversal</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#depthfirsttraversal" class="tsd-kind-icon">depth<wbr>First<wbr>Traversal</a>
